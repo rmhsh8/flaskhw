@@ -2,14 +2,14 @@ from flask import Flask
 import jinja2
 
 app = Flask(__name__)
-app.config['debug'] =True
+app.config['DEBUG'] =True
+
+name = 'Lisa'
+city_names = ["Paris", "London", "Rome", "Tahiti"]
 
 @app.route('/')
 def main():
-    name = 'Lisa'
-    city_names = ["Paris", "London", "Rome", "Tahiti"]
     return '''
-
 <html>
     </head>
     <body>
@@ -26,4 +26,4 @@ def main():
     </body>
 </html> 
 '''
-#app.run()
+app.run()
