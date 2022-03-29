@@ -1,5 +1,4 @@
 from flask import Flask
-import jinja2
 
 app = Flask(__name__)
 
@@ -7,14 +6,14 @@ name = 'Lisa'
 city_names = ["Paris", "London", "Rome", "Tahiti"]
 
 @app.route('/')
-def main():
+def home():
     return '''
 <html>
     </head>
     <body>
-        <h1>Welcome ''' + name + ''' </h1>
+        <h1>Welcome ''' + name + ''' ! </h1>
         <p>
-            <a href = "https://www.google.com/" > not google</a>
+            <a href = "www.google.com" > not google </a>
             <ul>
                 <li> ''' + city_names[0] + ''' </li>
                 <li> ''' + city_names[1] + ''' </li>
